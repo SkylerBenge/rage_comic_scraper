@@ -9,7 +9,7 @@ gem "paperclip"
 gem "will_paginate", "~> 3.0"
 gem "rmagick"
 gem "json"
-gem 'ruby-debug'
+#gem 'ruby-debug'
 gem 'jquery-rails'
 
 group :test, :development do
