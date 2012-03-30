@@ -11,6 +11,7 @@ gem "rmagick"
 gem "json"
 #gem 'ruby-debug'
 gem 'jquery-rails'
+gem 'ruby_reddit_api'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
