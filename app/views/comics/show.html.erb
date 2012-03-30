@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Domain:</b>
+  <%= @comic.domain %>
+</p>
+
+<p>
+  <b>Score:</b>
+  <%= @comic.score %>
+</p>
+
+<p>
+  <b>Nsfw:</b>
+  <%= @comic.nsfw %>
+</p>
+
+<p>
+  <b>Downs:</b>
+  <%= @comic.downs %>
+</p>
+
+<p>
+  <b>Reddit url:</b>
+  <%= @comic.reddit_url %>
+</p>
+
+<p>
+  <b>Comic url:</b>
+  <%= @comic.comic_url %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @comic.title %>
+</p>
+
+<p>
+  <b>Submitted at:</b>
+  <%= @comic.submitted_at %>
+</p>
+
+<p>
+  <b>Ups:</b>
+  <%= @comic.ups %>
+</p>
+
+
+<%= link_to 'Edit', edit_comic_path(@comic) %> |
+<%= link_to 'Back', comics_path %>

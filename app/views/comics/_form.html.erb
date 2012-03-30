@@ -1,0 +1,53 @@
+<%= form_for(@comic) do |f| %>
+  <% if @comic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comic.errors.count, "error") %> prohibited this comic from being saved:</h2>
+
+      <ul>
+      <% @comic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br />
+    <%= f.number_field :score %>
+  </div>
+  <div class="field">
+    <%= f.label :nsfw %><br />
+    <%= f.check_box :nsfw %>
+  </div>
+  <div class="field">
+    <%= f.label :downs %><br />
+    <%= f.number_field :downs %>
+  </div>
+  <div class="field">
+    <%= f.label :reddit_url %><br />
+    <%= f.text_field :reddit_url %>
+  </div>
+  <div class="field">
+    <%= f.label :comic_url %><br />
+    <%= f.text_field :comic_url %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :submitted_at %><br />
+    <%= f.datetime_select :submitted_at %>
+  </div>
+  <div class="field">
+    <%= f.label :ups %><br />
+    <%= f.number_field :ups %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
