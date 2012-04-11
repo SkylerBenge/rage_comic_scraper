@@ -11,10 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120330015212) do
+ActiveRecord::Schema.define(:version => 20120411212836) do
 
   create_table "comics", :force => true do |t|
     t.string   "domain"
+    t.string   "reddit_id"
     t.integer  "score"
     t.boolean  "nsfw"
     t.integer  "downs"
@@ -26,5 +27,7 @@ ActiveRecord::Schema.define(:version => 20120330015212) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  add_index "comics", ["reddit_id"], :name => "index_comics_on_reddit_id", :unique => true
 
 end

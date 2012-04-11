@@ -2,6 +2,7 @@ class CreateComics < ActiveRecord::Migration
   def change
     create_table :comics do |t|
       t.string :domain
+      t.string :reddit_id
       t.integer :score
       t.boolean :nsfw
       t.integer :downs
