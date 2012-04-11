@@ -20,12 +20,15 @@ ActiveRecord::Schema.define(:version => 20120411212836) do
     t.boolean  "nsfw"
     t.integer  "downs"
     t.string   "reddit_url"
-    t.string   "comic_url"
     t.string   "title"
     t.datetime "submitted_at"
     t.integer  "ups"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "comic_strip_file_name"
+    t.string   "comic_strip_content_type"
+    t.integer  "comic_strip_file_size"
+    t.datetime "comic_strip_updated_at"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   add_index "comics", ["reddit_id"], :name => "index_comics_on_reddit_id", :unique => true

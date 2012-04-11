@@ -7,10 +7,10 @@ class CreateComics < ActiveRecord::Migration
       t.boolean :nsfw
       t.integer :downs
       t.string :reddit_url
-      t.string :comic_url
       t.string :title
       t.datetime :submitted_at
       t.integer :ups
+      t.has_attached_file :comic_strip
 
       t.timestamps
     end

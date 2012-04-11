@@ -16,16 +16,16 @@ module ComicImporter
     [].tap do |formatted_results|
       submissions.each do |submission|
         formatted_results << {
-          :reddit_id    => submission.id,
-          :domain       => submission.domain,
-          :score        => submission.score,
-          :nsfw         => submission.over_18,
-          :downs        => submission.downs,
-          :ups          => submission.ups,
-          :reddit_url   => submission.permalink,
-          :comic_url    => submission.url,
-          :title        => submission.title,
-          :submitted_at => submission.created
+          :reddit_id             => submission.id,
+          :domain                => submission.domain,
+          :score                 => submission.score,
+          :nsfw                  => submission.over_18,
+          :downs                 => submission.downs,
+          :ups                   => submission.ups,
+          :reddit_url            => submission.permalink,
+          :title                 => submission.title,
+          :submitted_at          => submission.created,
+          :comic_strip_from_url  => submission.url
         }
       end
     end
