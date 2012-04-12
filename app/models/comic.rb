@@ -23,7 +23,7 @@ class Comic < ActiveRecord::Base
   def self.sync_with_reddit!
     ComicImporter::PAGES.each do |page|
       ComicImporter.browse(:page => page).each do |comic_attributes|
-        Comic.find_or_create_by_reddit_id(comic_attributes[:reddit_id]).tap do |comic|
+        Comic.find_or_initialize_by_reddit_id(comic_attributes[:reddit_id]).tap do |comic|
           comic.attributes = comic_attributes
           comic.save!
         end
